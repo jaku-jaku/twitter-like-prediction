@@ -1,5 +1,7 @@
 # Kaggle Instruction
 
+- [ 🏆 [3rd place out of 75](https://www.kaggle.com/competitions/cs480680-winter2021/leaderboard) ] within the class for CS480/680 - 100%
+
 ## TRAIN MODEL:
 - change the absolute path inside `main_twitter_like.py`
 - you may modify any parameters inside `main_twitter_like.py` to produce a different model 
