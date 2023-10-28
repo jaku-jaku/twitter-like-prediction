@@ -1,0 +1,264 @@
+
+TwitterLikePredictor.PredictorConfiguration(Y_TAG='likes_count', USE_GPU=True, MODEL_TAG='latest-v1-emphasize-rebuild-3', PRE_PROCESS_TAG='latest-v1-emphasize-rebuild-3', DELIMITER_SET='; |, |、|。| ', SYMBOLE_REMOVE_LIST=['\\[', '\\]', '\\(', '\\)'], KEYS_TO_REMOVE_LIST=['http', 'arXiv', 'https'], ENABLE_EXTRA_CONVERSION=[], SHUFFLE_TRAINING=True, PERCENT_TRAINING_SET=None, BOW_TOTAL_NUM_EPOCHS=100, LOSS_FUNC=NLLLoss(), LEARNING_RATE=1e-05, FORCE_REBUILD=False, OPTIMIZER=<class 'torch.optim.sgd.SGD'>, MOMENTUM=0.9, MODEL_VERSION='v', D_HIDDEN=100, N_TOP_FEATURES=None, N_MIN_VARIANCE=None, N_EARLY_STOPPING_NDROPS=None)
+Prepare Hardware
+Pre-processing Dataset ...
+Loading Pre-Processed Dataset From /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/processed_data/preprocessed-idx-train-[latest-v1-emphasize-rebuild-3].csv [size:(55824, 23)]
+Loading Pre-Processed Test Dataset From /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/processed_data/preprocessed-idx-test-[latest-v1-emphasize-rebuild-3].csv
+Loading Pre-Processed Word To Vector IX From /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/processed_data/bow-dict-[latest-v1-emphasize-rebuild-3].json
+N_train:55824  N_validation:0
+New Model Created
+Use Model Version: v
+REPORT SUMMARY ======================= 
+VOCAB_SIZE: 84018
+NUM_LABELS: 4
+MODEL: BOW_Module(
+  (linear): Linear(in_features=84018, out_features=4, bias=True)
+)
+======================= END OF INIT [Ellapsed:10.643233060836792s] =======================
+
+
+TRAING BEGIN -----------------------------:
+> epoch 1/100:
+    epoch 1 > Training: [LOSS: 1.2165 | ACC: 0.4403] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.23 s | rate:109.23071
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:0].csv
+> epoch 2/100:
+    epoch 2 > Training: [LOSS: 1.1139 | ACC: 0.5101] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.95 s | rate:108.94982
+> epoch 3/100:
+    epoch 3 > Training: [LOSS: 1.0688 | ACC: 0.5406] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.09 s | rate:109.08553
+> epoch 4/100:
+    epoch 4 > Training: [LOSS: 1.0383 | ACC: 0.5610] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.11 s | rate:109.10944
+> epoch 5/100:
+    epoch 5 > Training: [LOSS: 1.0150 | ACC: 0.5748] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.96 s | rate:108.95677
+> epoch 6/100:
+    epoch 6 > Training: [LOSS: 0.9959 | ACC: 0.5870] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.80 s | rate:108.79937
+> epoch 7/100:
+    epoch 7 > Training: [LOSS: 0.9797 | ACC: 0.5968] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.87 s | rate:108.87454
+> epoch 8/100:
+    epoch 8 > Training: [LOSS: 0.9656 | ACC: 0.6055] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.95 s | rate:108.94714
+> epoch 9/100:
+    epoch 9 > Training: [LOSS: 0.9531 | ACC: 0.6120] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.79 s | rate:108.78568
+> epoch 10/100:
+    epoch 10 > Training: [LOSS: 0.9418 | ACC: 0.6176] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.03 s | rate:109.02981
+> epoch 11/100:
+    epoch 11 > Training: [LOSS: 0.9316 | ACC: 0.6223] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.25 s | rate:109.25001
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:10].csv
+> epoch 12/100:
+    epoch 12 > Training: [LOSS: 0.9222 | ACC: 0.6273] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.85 s | rate:108.84954
+> epoch 13/100:
+    epoch 13 > Training: [LOSS: 0.9135 | ACC: 0.6312] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 112.32 s | rate:112.32091
+> epoch 14/100:
+    epoch 14 > Training: [LOSS: 0.9054 | ACC: 0.6352] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 143.05 s | rate:143.05157
+> epoch 15/100:
+    epoch 15 > Training: [LOSS: 0.8979 | ACC: 0.6392] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 181.27 s | rate:181.27053
+> epoch 16/100:
+    epoch 16 > Training: [LOSS: 0.8908 | ACC: 0.6424] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 172.90 s | rate:172.89617
+> epoch 17/100:
+    epoch 17 > Training: [LOSS: 0.8842 | ACC: 0.6457] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.48 s | rate:173.47846
+> epoch 18/100:
+    epoch 18 > Training: [LOSS: 0.8779 | ACC: 0.6481] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 174.05 s | rate:174.04631
+> epoch 19/100:
+    epoch 19 > Training: [LOSS: 0.8719 | ACC: 0.6504] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.13 s | rate:173.12667
+> epoch 20/100:
+    epoch 20 > Training: [LOSS: 0.8662 | ACC: 0.6529] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 172.89 s | rate:172.88799
+> epoch 21/100:
+    epoch 21 > Training: [LOSS: 0.8609 | ACC: 0.6552] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.28 s | rate:173.27831
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:20].csv
+> epoch 22/100:
+    epoch 22 > Training: [LOSS: 0.8557 | ACC: 0.6569] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.69 s | rate:173.68792
+> epoch 23/100:
+    epoch 23 > Training: [LOSS: 0.8508 | ACC: 0.6582] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 182.46 s | rate:182.46350
+> epoch 24/100:
+    epoch 24 > Training: [LOSS: 0.8461 | ACC: 0.6600] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.49 s | rate:173.49179
+> epoch 25/100:
+    epoch 25 > Training: [LOSS: 0.8416 | ACC: 0.6612] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.80 s | rate:173.79816
+> epoch 26/100:
+    epoch 26 > Training: [LOSS: 0.8373 | ACC: 0.6627] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 180.25 s | rate:180.25223
+> epoch 27/100:
+    epoch 27 > Training: [LOSS: 0.8332 | ACC: 0.6640] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.62 s | rate:173.61971
+> epoch 28/100:
+    epoch 28 > Training: [LOSS: 0.8292 | ACC: 0.6654] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 174.17 s | rate:174.17288
+> epoch 29/100:
+    epoch 29 > Training: [LOSS: 0.8253 | ACC: 0.6662] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 172.89 s | rate:172.89003
+> epoch 30/100:
+    epoch 30 > Training: [LOSS: 0.8216 | ACC: 0.6673] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.59 s | rate:173.59263
+> epoch 31/100:
+    epoch 31 > Training: [LOSS: 0.8181 | ACC: 0.6684] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 173.26 s | rate:173.26412
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:30].csv
+> epoch 32/100:
+    epoch 32 > Training: [LOSS: 0.8146 | ACC: 0.6695] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 168.19 s | rate:168.19394
+> epoch 33/100:
+    epoch 33 > Training: [LOSS: 0.8113 | ACC: 0.6706] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 110.40 s | rate:110.39708
+> epoch 34/100:
+    epoch 34 > Training: [LOSS: 0.8081 | ACC: 0.6716] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.36 s | rate:109.35714
+> epoch 35/100:
+    epoch 35 > Training: [LOSS: 0.8049 | ACC: 0.6723] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.35 s | rate:109.35474
+> epoch 36/100:
+    epoch 36 > Training: [LOSS: 0.8019 | ACC: 0.6729] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.14 s | rate:109.14060
+> epoch 37/100:
+    epoch 37 > Training: [LOSS: 0.7990 | ACC: 0.6737] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.42 s | rate:109.42021
+> epoch 38/100:
+    epoch 38 > Training: [LOSS: 0.7962 | ACC: 0.6743] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.44 s | rate:109.44470
+> epoch 39/100:
+    epoch 39 > Training: [LOSS: 0.7934 | ACC: 0.6748] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.09 s | rate:109.08937
+> epoch 40/100:
+    epoch 40 > Training: [LOSS: 0.7907 | ACC: 0.6755] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.14 s | rate:109.14315
+> epoch 41/100:
+    epoch 41 > Training: [LOSS: 0.7881 | ACC: 0.6765] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.23 s | rate:109.23248
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:40].csv
+> epoch 42/100:
+    epoch 42 > Training: [LOSS: 0.7856 | ACC: 0.6772] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.64 s | rate:108.64375
+> epoch 43/100:
+    epoch 43 > Training: [LOSS: 0.7831 | ACC: 0.6781] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.82 s | rate:108.82202
+> epoch 44/100:
+    epoch 44 > Training: [LOSS: 0.7807 | ACC: 0.6786] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.69 s | rate:108.69434
+> epoch 45/100:
+    epoch 45 > Training: [LOSS: 0.7784 | ACC: 0.6793] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.88 s | rate:108.88158
+> epoch 46/100:
+    epoch 46 > Training: [LOSS: 0.7761 | ACC: 0.6799] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.00 s | rate:109.00244
+> epoch 47/100:
+    epoch 47 > Training: [LOSS: 0.7739 | ACC: 0.6804] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.07 s | rate:109.07271
+> epoch 48/100:
+    epoch 48 > Training: [LOSS: 0.7718 | ACC: 0.6810] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.06 s | rate:109.05689
+> epoch 49/100:
+    epoch 49 > Training: [LOSS: 0.7697 | ACC: 0.6814] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.88 s | rate:108.87752
+> epoch 50/100:
+    epoch 50 > Training: [LOSS: 0.7676 | ACC: 0.6818] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.89 s | rate:108.89404
+> epoch 51/100:
+    epoch 51 > Training: [LOSS: 0.7656 | ACC: 0.6821] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.04 s | rate:109.04261
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:50].csv
+> epoch 52/100:
+    epoch 52 > Training: [LOSS: 0.7637 | ACC: 0.6827] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.20 s | rate:109.20357
+> epoch 53/100:
+    epoch 53 > Training: [LOSS: 0.7618 | ACC: 0.6832] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.15 s | rate:109.15414
+> epoch 54/100:
+    epoch 54 > Training: [LOSS: 0.7599 | ACC: 0.6839] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.10 s | rate:109.09756
+> epoch 55/100:
+    epoch 55 > Training: [LOSS: 0.7581 | ACC: 0.6845] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.11 s | rate:109.10665
+> epoch 56/100:
+    epoch 56 > Training: [LOSS: 0.7563 | ACC: 0.6849] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.08 s | rate:109.07639
+> epoch 57/100:
+    epoch 57 > Training: [LOSS: 0.7546 | ACC: 0.6854] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.96 s | rate:108.96394
+> epoch 58/100:
+    epoch 58 > Training: [LOSS: 0.7529 | ACC: 0.6860] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.22 s | rate:109.21606
+> epoch 59/100:
+    epoch 59 > Training: [LOSS: 0.7512 | ACC: 0.6863] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.01 s | rate:109.01399
+> epoch 60/100:
+    epoch 60 > Training: [LOSS: 0.7496 | ACC: 0.6866] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.02 s | rate:109.02282
+> epoch 61/100:
+    epoch 61 > Training: [LOSS: 0.7480 | ACC: 0.6873] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.04 s | rate:109.03929
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:60].csv
+> epoch 62/100:
+    epoch 62 > Training: [LOSS: 0.7464 | ACC: 0.6878] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.35 s | rate:109.35409
+> epoch 63/100:
+    epoch 63 > Training: [LOSS: 0.7449 | ACC: 0.6881] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.30 s | rate:109.29986
+> epoch 64/100:
+    epoch 64 > Training: [LOSS: 0.7434 | ACC: 0.6883] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.24 s | rate:109.24438
+> epoch 65/100:
+    epoch 65 > Training: [LOSS: 0.7419 | ACC: 0.6887] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.32 s | rate:109.31806
+> epoch 66/100:
+    epoch 66 > Training: [LOSS: 0.7405 | ACC: 0.6891] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.27 s | rate:109.27221
+> epoch 67/100:
+    epoch 67 > Training: [LOSS: 0.7391 | ACC: 0.6896] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.25 s | rate:109.24508
+> epoch 68/100:
+    epoch 68 > Training: [LOSS: 0.7377 | ACC: 0.6902] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.30 s | rate:109.29961
+> epoch 69/100:
+    epoch 69 > Training: [LOSS: 0.7363 | ACC: 0.6907] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.35 s | rate:109.35198
+> epoch 70/100:
+    epoch 70 > Training: [LOSS: 0.7350 | ACC: 0.6911] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.22 s | rate:109.21862
+> epoch 71/100:
+    epoch 71 > Training: [LOSS: 0.7337 | ACC: 0.6915] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.08 s | rate:109.08468
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:70].csv
+> epoch 72/100:
+    epoch 72 > Training: [LOSS: 0.7324 | ACC: 0.6917] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.26 s | rate:109.26184
+> epoch 73/100:
+    epoch 73 > Training: [LOSS: 0.7311 | ACC: 0.6920] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.17 s | rate:109.17202
+> epoch 74/100:
+    epoch 74 > Training: [LOSS: 0.7299 | ACC: 0.6924] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 108.91 s | rate:108.90631
+> epoch 75/100:
+    epoch 75 > Training: [LOSS: 0.7287 | ACC: 0.6927] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.04 s | rate:109.03852
+> epoch 76/100:
+    epoch 76 > Training: [LOSS: 0.7275 | ACC: 0.6930] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.23 s | rate:109.22743
+> epoch 77/100:
+    epoch 77 > Training: [LOSS: 0.7263 | ACC: 0.6935] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.12 s | rate:109.11944
+> epoch 78/100:
+    epoch 78 > Training: [LOSS: 0.7251 | ACC: 0.6939] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.29 s | rate:109.29035
+> epoch 79/100:
+    epoch 79 > Training: [LOSS: 0.7240 | ACC: 0.6943] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.35 s | rate:109.35016
+> epoch 80/100:
+    epoch 80 > Training: [LOSS: 0.7228 | ACC: 0.6945] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.36 s | rate:109.36227
+> epoch 81/100:
+    epoch 81 > Training: [LOSS: 0.7217 | ACC: 0.6947] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.20 s | rate:109.20108
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:80].csv
+> epoch 82/100:
+    epoch 82 > Training: [LOSS: 0.7207 | ACC: 0.6951] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.08 s | rate:109.07594
+> epoch 83/100:
+    epoch 83 > Training: [LOSS: 0.7196 | ACC: 0.6954] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.14 s | rate:109.14440
+> epoch 84/100:
+    epoch 84 > Training: [LOSS: 0.7185 | ACC: 0.6958] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.19 s | rate:109.18860
+> epoch 85/100:
+    epoch 85 > Training: [LOSS: 0.7175 | ACC: 0.6960] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.06 s | rate:109.05569
+> epoch 86/100:
+    epoch 86 > Training: [LOSS: 0.7165 | ACC: 0.6965] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.20 s | rate:109.19854
+> epoch 87/100:
+    epoch 87 > Training: [LOSS: 0.7155 | ACC: 0.6967] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.50 s | rate:109.49551
+> epoch 88/100:
+    epoch 88 > Training: [LOSS: 0.7145 | ACC: 0.6970] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.24 s | rate:109.23821
+> epoch 89/100:
+    epoch 89 > Training: [LOSS: 0.7135 | ACC: 0.6974] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.37 s | rate:109.36901
+> epoch 90/100:
+    epoch 90 > Training: [LOSS: 0.7125 | ACC: 0.6978] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.19 s | rate:109.18554
+> epoch 91/100:
+    epoch 91 > Training: [LOSS: 0.7116 | ACC: 0.6981] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.14 s | rate:109.14088
+> [Per 10 epoch Auto-sampling] 0.0:
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-autosave-per10-e:90].csv
+> epoch 92/100:
+    epoch 92 > Training: [LOSS: 0.7106 | ACC: 0.6984] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.15 s | rate:109.14644
+> epoch 93/100:
+    epoch 93 > Training: [LOSS: 0.7097 | ACC: 0.6987] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.28 s | rate:109.27697
+> epoch 94/100:
+    epoch 94 > Training: [LOSS: 0.7088 | ACC: 0.6989] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.15 s | rate:109.14596
+> epoch 95/100:
+    epoch 95 > Training: [LOSS: 0.7079 | ACC: 0.6992] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.16 s | rate:109.15650
+> epoch 96/100:
+    epoch 96 > Training: [LOSS: 0.7070 | ACC: 0.6995] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.21 s | rate:109.20673
+> epoch 97/100:
+    epoch 97 > Training: [LOSS: 0.7061 | ACC: 0.6996] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.14 s | rate:109.13725
+> epoch 98/100:
+    epoch 98 > Training: [LOSS: 0.7053 | ACC: 0.6998] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.09 s | rate:109.09497
+> epoch 99/100:
+    epoch 99 > Training: [LOSS: 0.7044 | ACC: 0.7001] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.30 s | rate:109.29511
+> epoch 100/100:
+    epoch 100 > Training: [LOSS: 0.7036 | ACC: 0.7004] | Testing: [LOSS: 0.0000 | ACC: 0.0000] Ellapsed: 109.12 s | rate:109.12131
+End of Program
+Predicting ...
+Converting to dataframe ...
+Prediction of the Test Dataset Saved @ /home/jx/JXProject/Github/UW__4B_Individual_Works/CS 480/Kaggle/output/dev-1-final-run4/y-pred/test_y_pred-[latest-v1-emphasize-rebuild-3-final].csv
